@@ -1,4 +1,3 @@
-import $ from "jquery"
 
 //进度条
 export function progressBar() {
