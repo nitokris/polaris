@@ -1,14 +1,25 @@
-import $ from 'jquery'
-import 'jquery-lazy'
-// import {XHL} from "./modules/ajax";
-// import {progressBar} from "./modules/tools";
+import $ from 'jquery';
+import 'jquery-lazy';
+import {XHL} from "./modules/ajax";
+import {progressBar} from "./modules/tools";
 
-require('./style.css')
+import('./style.css');
 
-// let Nitokris = {
-//     XHL,
-// }
+let Polaris = {
+    //ajax加载文章
+    XHL,
+    //自适应
+    AH: function () {
+        $(window).resize(function () {
+            Polaris.AH()
+        })
+    },
+    //
+}
 
 $(function () {
+    progressBar();
+    Polaris.XHL();
+    Polaris.AH();
     $(".lazy").lazy();
-})
+});

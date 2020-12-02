@@ -1,4 +1,2 @@
 @import "css/default.css";
-.hello{
-    color: red;
-}
+@import "css/header.css";
